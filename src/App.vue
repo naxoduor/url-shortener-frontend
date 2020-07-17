@@ -2,33 +2,22 @@
   <div id="app">
     <Header />
     <AddUrl v-on:add-url="addNewUrl"/>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Full Url</th>
-          <th>Shortened url</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-bind:key="url_item.id" v-for="url_item in this.url_list">
-          <td>{{url_item.full}}</td>
-          <td>{{url_item.short}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <UrlList v-bind:url_list="url_list"/>
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header'
 import AddUrl from './components/AddUrl'
+import UrlList from './components/UrlList'
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     Header,
-    AddUrl
+    AddUrl,
+    UrlList
   },
   data() {
     return {
