@@ -10,8 +10,8 @@
       </thead>
       <tbody>
         <tr v-bind:key="url_item.id" v-for="url_item in this.url_list">
-          <td>{{url_item.full}}</td>
-          <td class="short_url">{{url_item.short}}</td>
+          <td><a href="/">{{url_item.full}}</a></td>
+          <td class="short_url"><a href="/">{{url_item.short}}</a></td>
         </tr>
       </tbody>
     </table>
