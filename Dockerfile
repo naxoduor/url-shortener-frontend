@@ -9,7 +9,7 @@ COPY package.json ./
 
 RUN npm install
 
-COPY ./ .
+COPY . .
 
 FROM develop-stage as build-stage
 RUN npm run-script build
