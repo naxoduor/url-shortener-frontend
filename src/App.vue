@@ -27,7 +27,7 @@ export default {
   methods: {
     addNewUrl(newUrlItem){
       const{fullUrl} = newUrlItem
-      axios.post("http://127.0.0.1:5000/shortUrls", 
+      axios.post("http://104.248.73.139:5000/shortUrls", 
       {
         fullUrl
       })
@@ -37,7 +37,7 @@ export default {
 
   },
   created(){
-    axios.get('http://127.0.0.1:5000/')
+    axios.get('http://104.248.73.139:5000/')
     .then(res=>this.url_list=res.data)
     .catch(err=>console.log(err))
 
